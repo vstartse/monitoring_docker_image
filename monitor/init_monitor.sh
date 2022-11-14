@@ -2,17 +2,17 @@
 
 cd $K2_HOME
 
-if [ $FABRIC_IPS ]
+if [ ! -z ${FABRIC_IPS+x} ]
 then
     sh $K2_HOME/parse_ips.sh $FABRIC_IPS FABRIC
     sh $K2_HOME/scripts/create_sd_configs.sh fabric
 fi
-if [ $CASSANDRA_IPS ]
+if [ ! -z ${CASSANDRA_IPS+x} ]
 then
     sh $K2_HOME/parse_ips.sh $CASSANDRA_IPS CASSANDRA
     sh $K2_HOME/scripts/create_sd_configs.sh cassandra
 fi
-if [ $KAFKA_IPS ]
+if [ ! -z ${KAFKA_IPS+x} ]
 then
     sh $K2_HOME/parse_ips.sh $KAFKA_IPS KAFKA
     sh $K2_HOME/scripts/create_sd_configs.sh kafka

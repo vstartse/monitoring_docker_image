@@ -19,9 +19,9 @@ PROMETHEUS_FLAGS="--config.file=$K2_HOME/config/prometheus/prometheus_default.ya
 LOKI_FLAGS="-config.file=$K2_HOME/config/loki/loki_default.yaml"
 
 # COMMANDS
-GRAFANA_START="nohup $K2_HOME/grafana/bin/grafana-server $GRAFANA_FLAGS  >/dev/null 2>&1 &"
-PROMETHEUS_START="nohup $K2_HOME/prometheus/prometheus $PROMETHEUS_FLAGS >/dev/null 2> ~/prometheus/prom.log &"
-LOKI_START="nohup $K2_HOME/loki/loki-linux-amd64 $LOKI_FLAGS >/dev/null 2> ~/loki/loki.log &"
+GRAFANA_START="nohup $K2_HOME/grafana/bin/grafana-server $GRAFANA_FLAGS &"
+PROMETHEUS_START="nohup $K2_HOME/prometheus/prometheus $PROMETHEUS_FLAGS &"
+LOKI_START="nohup $K2_HOME/loki/loki-linux-amd64 $LOKI_FLAGS &"
 
 ########## FUNCTIONS ##########
 
