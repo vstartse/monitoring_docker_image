@@ -31,5 +31,8 @@ USER monitor
 # Define environment variables
 ENV K2_HOME=/opt/apps/monitor
 
+# Configure monitor
+RUN sh ${K2_HOME}/configure.sh
+
 # Run init script
 CMD [ "sh", "/opt/apps/monitor/init_monitor.sh" ]
