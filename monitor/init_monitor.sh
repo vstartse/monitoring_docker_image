@@ -44,7 +44,7 @@ mkdir loki
 mv loki-linux-amd64 loki
 cp install/loki_default.yaml config/loki/
 
-#### LOKI CONFIGURATION ####
+#### NODE EXPORTER CONFIGURATION ####
 
 tar -zxvf node_exporter*.tar.gz
 rm node_exporter*.tar.gz
